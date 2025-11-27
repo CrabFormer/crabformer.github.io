@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrabFormer: RGB-D Segmentation and Pose Estimation</title>
+    <style>
+        /* Basic inline CSS for readability - you can replace this with a separate style.css later */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #3498db;
+            margin-top: 30px;
+        }
+        .authors, .affiliations {
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+        .abstract-content {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-left: 5px solid #e74c3c;
+        }
+        .keywords {
+            font-style: italic;
+            font-size: 0.9em;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CrabFormer: RGB-D Segmentation and Pose Estimation for Front-End Loading of Piled Chesapeake Blue Crabs</h1>
+
+    <div class="authors">
+        <strong>Mohamed Amr Ali</strong> <sup>a, b, *</sup>,
+        <strong>Faranguisse Sadrieh</strong> <sup>a, b</sup>,
+        <strong>Benjamin Wu</strong> <sup>a</sup>,
+        <strong>Yang Tao</strong> <sup>a, b, *</sup>
+    </div>
+
+    <div class="affiliations">
+        <p><sup>a</sup> Fischell Department of Bioengineering, University of Maryland, College Park, MD 20742, USA</p>
+        <p><sup>b</sup> Maryland Robotics Center, University of Maryland, College Park, MD 20742, USA</p>
+        <p>* mali93@terpmail.umd.edu, ytao@umd.edu</p>
+    </div>
+
+    <hr>
+
+    <h2>Abstract</h2>
+    <div class="abstract-content">
+        <p>CrabFormer is a multitasking transformer model developed to tackle the challenges of front-end loading in the automated processing of Chesapeake blue crabs. Existing methods often struggle to accurately identify crabs in chaotic, piled configurations, where occlusions and overlapping are common. CrabFormer addresses this by combining instance segmentation and keypoint prediction using RGB-D inputs to detect crabs and estimate their orientation. Utilizing a dual-patch Swin-T backbone, the model processes RGB and depth data separately, effectively capturing visual and geometric features. CrabFormer is evaluated on a custom dataset comprising discrete, overlapping, and piled crabs. It achieves a segmentation Average Precision (AP) of 67.84 and Average Recall (AR) of 76.29, while its keypoint prediction AP and AR are 62.43 and 77.23, respectively. The model outperforms state-of-the-art transformer-based segmentation and keypoint prediction models, particularly in the most complex piled cases, demonstrating improvements in both AP and AR. It excels in identifying the topmost crab in a pile, a key task for automated processing. Additionally, CrabFormer achieves competitive inference times while maintaining superior multitasking performance. These results highlight CrabFormer’s potential to enhance the automation of front-end loading in the seafood industry, reducing labor reliance and improving operational efficiency. Future work will expand the dataset and explore the model’s applicability to other crustaceans with similar morphological complexities.</p>
+    </div>
+
+    <div class="keywords">
+        **Keywords:** Computer Vision, Front-end Loading, Instance Segmentation, Pose Estimation, Food Automation.
+    </div>
+
+</body>
+</html>
