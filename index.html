@@ -18,12 +18,15 @@
             border: 1px solid #ddd;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            /* Ensure the main text flow starts on the left */
+            text-align: left; 
         }
         h1 {
             color: #2c3e50;
             border-bottom: 2px solid #3498db;
             padding-bottom: 10px;
-            text-align: center; /* Center the main title */
+            /* Main title is typically centered for papers */
+            text-align: center; 
         }
         h2 {
             color: #3498db;
@@ -34,7 +37,8 @@
         .authors, .affiliations {
             font-size: 0.9em;
             margin-bottom: 10px;
-            text-align: center; /* Center author block */
+            /* CHANGED: Align authors/affiliations to the left */
+            text-align: left; 
         }
         
         /* Abstract Block Styling */
@@ -43,19 +47,21 @@
             padding: 20px;
             border-left: 5px solid #e74c3c;
             border-radius: 0 8px 8px 0;
+            text-align: justify; /* Use justified for a professional abstract look */
         }
         .keywords {
             font-style: italic;
             font-size: 0.9em;
             margin-top: 20px;
-            text-align: center;
+            /* CHANGED: Keywords aligned left */
+            text-align: left; 
             padding-top: 10px;
             border-top: 1px dashed #ccc;
         }
 
-        /* BUTTON STYLING (Adapted from your example) */
+        /* BUTTON STYLING (Kept centered) */
         .publication-links {
-            text-align: center; /* Center the buttons */
+            text-align: center; /* KEEP the buttons centered */
             margin: 20px 0;
             padding: 10px 0;
         }
@@ -73,15 +79,15 @@
             transition: background-color 0.3s, box-shadow 0.3s;
         }
         .is-rounded {
-            border-radius: 290486px; /* High value for full rounding */
+            border-radius: 290486px;
         }
         .is-dark {
-            background-color: #2c3e50; /* Darker blue/grey background */
-            color: #ffffff; /* White text */
+            background-color: #2c3e50;
+            color: #ffffff;
             border: 1px solid #2c3e50;
         }
         .is-dark:hover {
-            background-color: #34495e; /* Slightly lighter on hover */
+            background-color: #34495e;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         .icon {
@@ -93,18 +99,21 @@
 
     <h1>CrabFormer: RGB-D Segmentation and Pose Estimation for Front-End Loading of Piled Chesapeake Blue Crabs</h1>
 
-    <div class="authors">
-        <strong>Mohamed Amr Ali</strong> <sup>a, b, *</sup>,
-        <strong>Faranguisse Sadrieh</strong> <sup>a, b</sup>,
-        <strong>Benjamin Wu</strong> <sup>a</sup>,
-        <strong>Yang Tao</strong> <sup>a, b, *</sup>
+    <div>
+        <div class="authors">
+            <strong>Mohamed Amr Ali</strong> <sup>a, b, *</sup>,
+            <strong>Faranguisse Sadrieh</strong> <sup>a, b</sup>,
+            <strong>Benjamin Wu</strong> <sup>a</sup>,
+            <strong>Yang Tao</strong> <sup>a, b, *</sup>
+        </div>
+
+        <div class="affiliations">
+            <p><sup>a</sup> Fischell Department of Bioengineering, University of Maryland, College Park, MD 20742, USA</p>
+            <p><sup>b</sup> Maryland Robotics Center, University of Maryland, College Park, MD 20742, USA</p>
+            <p>* mali93@terpmail.umd.edu, ytao@umd.edu</p>
+        </div>
     </div>
 
-    <div class="affiliations">
-        <p><sup>a</sup> Fischell Department of Bioengineering, University of Maryland, College Park, MD 20742, USA</p>
-        <p><sup>b</sup> Maryland Robotics Center, University of Maryland, College Park, MD 20742, USA</p>
-        <p>* mali93@terpmail.umd.edu, ytao@umd.edu</p>
-    </div>
 
     <div class="publication-links">
         <span class="link-block">
