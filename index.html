@@ -93,6 +93,27 @@
         .icon {
             margin-right: 8px;
         }
+        /* FIGURE SPECIFIC STYLING */
+        figure {
+            margin: 40px auto;
+            padding: 0;
+            max-width: 800px;
+        }
+        figure img {
+            max-width: 100%;
+            height: auto;
+            display: block; /* Important for centering */
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        figcaption {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #555;
+            text-align: left;
+            line-height: 1.4;
+        }
     </style>
 </head>
 <body>
@@ -144,6 +165,58 @@
             </a>
         </span>
     </div>
+
+    <hr>
+    <h2>Figures and Results</h2>
+
+    <figure>
+        <img src="images/Figure_1-System overview.png" alt="Diagram illustrating the front-end loading system for crab processing." loading="lazy">
+        <figcaption>
+            <strong>Figure 1: System overview.</strong> A diagram illustrating the front-end loading task to a custom crab processing machine. Crabs are piled on a loading table, where laser scanners and a CMOS camera scan them to capture depth information and RGB images. This data is used to determine the correct orientation and positioning of the crabs before they are transferred to the crab processing machine for further disassembly. The system aims to automate the labor-intensive crab loading.
+        </figcaption>
+    </figure>
+
+    <figure>
+        <img src="images/Figure_2-Dataset.png" alt="Example images of discrete, overlapping, and piled crab configurations from the dataset." loading="lazy">
+        <figcaption>
+            <strong>Figure 2: Dataset Examples.</strong> Example images of different crab configurations from the dataset used to train the CrabFormer model. (Left) Discrete: crabs are well separated with no overlap. (Middle) Overlapping: crabs partially overlap, creating a more complex segmentation task. (Right) Piled: crabs are stacked on each other, presenting the most challenging case for instance segmentation and pose estimation.
+        </figcaption>
+    </figure>
+
+    <figure>
+        <img src="images/Figure_3-CrabFormer Model.png" alt="Architecture of the CrabFormer model for RGB-D instance segmentation and keypoint prediction." loading="lazy">
+        <figcaption>
+            <strong>Figure 3: CrabFormer Model Architecture.</strong> The architecture of the CrabFormer model for RGB-D instance segmentation and keypoint prediction. The backbone is a feature extractor, passing features to the pixel decoder, which employs a multi-scale deformable attention transformer. The multi-scale masked-attention transformer decoder generates masks, keypoints, classes, and scores from query features and learnable positional embeddings.
+        </figcaption>
+    </figure>
+
+    <figure>
+        <img src="images/Figure_4-Backbone_types.png" alt="Comparison of fusion strategies for RGB-D data: Early, Intermediate, and Late Fusion." loading="lazy">
+        <figcaption>
+            <strong>Figure 4: Backbone Fusion Comparison.</strong> Comparison of fusion strategies for RGB-D data in the CrabFormer model. (Left) Early Fusion: RGB and depth data are concatenated before input into the Swin transformer. (Middle) Intermediate Fusion: A dual-patch approach is employed where RGB and depth features are patched separately before concatenating and inserting into the Swin transformer. (Right) Late Fusion: RGB and depth features are processed independently through separate Swin modules and combined via addition or mean operations to form the final RGB-D feature representation.
+        </figcaption>
+    </figure>
+
+    <figure>
+        <img src="images/Figure_5- real world implmentation.png" alt="Hardware setup for data collection of Chesapeake blue crabs." loading="lazy">
+        <figcaption>
+            <strong>Figure 5: Hardware Setup.</strong> Hardware setup for data collection of Chesapeake blue crabs, including an overhead CMOS camera, dual line lasers in a galvanometric unit, and a food-safe loading tabletop. Crabs are manually offloaded onto the tabletop, and the system captures high-resolution 3D images for segmentation and pose estimation model development.
+        </figcaption>
+    </figure>
+
+    <figure>
+        <img src="images/Figure_6-model prediction.png" alt="Visualization of the CrabFormer model predictions across different real-world pile configurations." loading="lazy">
+        <figcaption>
+            <strong>Figure 6: Model Prediction Visualization.</strong> Visualization of the CrabFormer model predictions across different real-world pile configurations. Each row corresponds to a specific case: Discrete (top), Overlapping (middle), and Piled (bottom). The columns show (Left) the colored input image, (Middle) the corresponding depth map, and (Right) the model’s real-world predicted instance segmentation masks along with keypoint predictions. The keypoints are indicated with colored skeletons. The green line is between the rear left and front center keypoints, while the blue line is between the front center and rear right keypoints.
+        </figcaption>
+    </figure>
+
+    <figure>
+        <img src="images/Figure_7-Prioritization_v2.png" alt="Crab prioritization algorithm output highlighting the topmost crab instance." loading="lazy">
+        <figcaption>
+            <strong>Figure 7: Prioritization Output.</strong> (a) Colored image and (b) depth map inputs to CrabFormer, yield the (c) model outputs showing each mask in a different color, with keypoints connected by a blue skeleton between the front center and rear right keypoints, and a green skeleton between the front center and rear left keypoints. (d) Highlights the topmost crab instance in the pile after the prioritization algorithm. A blue cross marks the midpoint between the rear right and rear left keypoints, and the green vector extends from the rear midpoint to the front center to indicate the crab’s orientation.
+        </figcaption>
+    </figure>
 
     <hr>
 
